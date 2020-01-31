@@ -1,0 +1,30 @@
+@import "./_navigation.scss";
+@import "./_header.scss";
+@import "./_block1.scss";
+@import "./_block2.scss";
+@import "./_block3.scss";
+
+html{
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    text-align: center;
+}
+
+.back{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-right: 30vh;
+    margin-left: 30vh;
+    padding-top: 0;
+}
+
+.city{
+    width: 80rem;
+}
