@@ -1,8 +1,9 @@
 @import "./_navigation.scss";
 @import "./_header.scss";
-@import "./_block1.scss";
-@import "./_block2.scss";
-@import "./_block3.scss";
+@import "./_variables.scss";
+@import "./_about.scss";
+@import "./_attractions.scss";
+@import url('https://fonts.googleapis.com/css?family=Cabin|Open+Sans');
 
 html{
     padding: 0;
@@ -14,17 +15,10 @@ html{
 body{
     background: black;
     text-align: center;
+    color: white;
 }
 
-.back{
-    display: flex;
-    flex-direction: column;
-    background: white;
-    margin-right: 30vh;
-    margin-left: 30vh;
-    padding-top: 0;
+img {
+    height: 20rem;
 }
 
-.city{
-    width: 80rem;
-}

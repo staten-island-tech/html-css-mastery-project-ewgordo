@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Open+Sans");
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
   overflow: hidden;
-  background-color: #333;
+  top: 0;
 }
 
 li {
-  float: left;
-  border-right: 1px solid #bbb;
+  float: right;
+  border-right: 1px solid white;
 }
 
 li a {
@@ -17,32 +18,123 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 20px;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(26, 26, 29, 0.5)), to(rgba(78, 78, 80, 0.5))), url(../media/trees.gif);
+  background-image: linear-gradient(to right bottom, rgba(26, 26, 29, 0.5), rgba(78, 78, 80, 0.5)), url(../media/trees.gif);
+  background-position: top;
+  background-size: cover;
+  border-bottom: white 13px solid;
 }
 
-.active {
-  background-color: #4CAF50;
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.scene {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.block1 {
+.heading-primary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 3rem;
-  margin-top: 7rem;
-  border: black solid 2px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100vw;
+  text-align: center;
+  font-weight: 700;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.heading-primary .heading-primary-main {
+  font-size: 4rem;
+  text-shadow: 3px 3px #333;
+  width: 80vw;
+  letter-spacing: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .heading-primary .heading-primary-main {
+    font-size: 6rem;
+    letter-spacing: 1.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .heading-primary .heading-primary-main {
+    font-size: 10rem;
+    letter-spacing: 2.2rem;
+  }
+}
+
+.heading-primary .heading-primary-sub {
+  font-size: 1.5rem;
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 1100px) {
+  .heading-primary .heading-primary-sub {
+    font-size: 3rem;
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-200rem);
+            transform: translateX(-200rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-200rem);
+            transform: translateX(-200rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+#gallery {
+  margin-top: 20px;
+}
+
+#gallery .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
 }
 
 html {
@@ -56,23 +148,10 @@ html {
 body {
   background: black;
   text-align: center;
+  color: white;
 }
 
-.back {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: white;
-  margin-right: 30vh;
-  margin-left: 30vh;
-  padding-top: 0;
-}
-
-.city {
-  width: 80rem;
+img {
+  height: 20rem;
 }
 /*# sourceMappingURL=style.css.map */
