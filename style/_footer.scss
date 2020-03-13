@@ -1,0 +1,119 @@
+@import "_variables.scss";
+
+
+
+
+.footer {
+    position: relative;
+     background-image: linear-gradient(
+        to right bottom,
+        rgba(255,0,0, .3),
+        rgba(200,12,12, 0.3)),
+      url(../media/city.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+    height:auto;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+      }
+    
+
+
+.footer i{
+  font-size: 5rem;
+  color: white;
+  @include tablet{
+    font-size: 10rem;
+  }
+  @include desktop{
+    font-size: 10rem;
+    }
+}
+
+.footer img{
+  height: 5rem;
+  filter: invert(1);
+  margin: 1rem;
+  @include tablet{
+    height: 20rem;
+  }
+  @include desktop{
+    height: 25rem;
+    margin: 3rem;
+    }
+}
+
+.media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+.book h1{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  @include tablet{
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  @include desktop{
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    }
+}
+
+.book a:link{
+  background-color: white;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 25px;
+  @include tablet{
+    font-size: 5rem;
+  }
+  @include desktop{
+    font-size: 5rem;
+    }
+}
+
+.book a:hover, .book a:active {
+  background-color: red;
+  color: white;
+}
+
+.footer h2{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-style: italic;
+  @include tablet{
+    font-size: 3rem;
+  }
+  @include desktop{
+    font-size: 4rem;
+    }
+}
+
+.name {
+  animation-name: yay;
+   animation-duration: .4s;
+   animation-iteration-count: infinite;
+
+}
+
+@keyframes yay {
+  0%   {color:red;}
+  25%  {color:yellow; }
+  50%  {color:blue; }
+  75%  {color:green;}
+  100% {color:red;}
+}

@@ -3,6 +3,9 @@
 @import "./_variables.scss";
 @import "./_about.scss";
 @import "./_attractions.scss";
+@import "./_dining.scss";
+@import "./_activities.scss";
+@import "./_footer.scss";
 @import url('https://fonts.googleapis.com/css?family=Cabin|Open+Sans');
 
 html{
@@ -18,7 +21,114 @@ body{
     color: white;
 }
 
-img {
-    height: 20rem;
+.box img{
+    height: 10rem;
 }
 
+.titles{
+    font-size: 5rem;
+    padding-bottom: 9rem;
+    @include tablet{
+        font-size: 8rem;
+      }
+      @include desktop{
+        font-size: 10rem;
+        }
+}
+
+
+.material-icons{
+    margin-top: 4rem;
+    font-size: 3rem;
+    @include tablet{
+        font-size: 8rem;
+      }
+      @include desktop{
+        font-size: 10rem;
+        }
+}
+// // img {
+// //     height:10rem;
+// //     @include tablet {
+// //         height: 20rem;
+// //       }
+// //       @include laptop {
+// //        height: 20rem;
+// //       }
+// // }
+
+// .loal {
+//  width: 98vw;
+//  height: auto;
+// }
+
+
+// .attractions {
+//     position: relative;
+//     height: 50vh;
+//      background-image: linear-gradient(
+//         to right bottom,
+//         rgba(color(primary), 0.9),
+//         rgba(color(primary-light), 0.9)),
+//       url(../media/scene.jpg);
+//     background-position: top;
+//     background-size: cover;
+//     border-bottom: maroon 13px solid;
+//     font-family: 'Cabin', sans-serif;
+//     margin: 0;
+//     padding: 0;
+//     @include laptop{
+//       height: 80vh;
+//       margin: 0;
+//     }
+// }
+// .yoo{
+//    height: 20rem; 
+// }
+
+// .yop:hover{
+//     transform: scale(1.5);
+//     filter: grayscale(0%);
+//     transition: .5s;
+// }
+// .pppop:hover .yer:not(:hover) {
+//     filter: grayscale(100%);        
+// }
+
+// .pppo{
+//     top:20rem;
+// }
+// .attractionslist{
+//     display: flex;
+//     flex-direction: row;
+//     margin: 10rem;
+// }
+// .hollywood {
+//     position: relative;
+//    height: 20rem;
+// }
+// .disney{
+//     position: relative;
+
+//     left: 3rem;
+//     height: 45rem;
+// }
+// .universal{
+//     position: relative;
+//     left: 3rem;
+//     height: 30rem;
+// }
+// .wheel{
+//     position: relative;
+//     left: 3rem;
+//     height: 30rem;
+// }
+// div.yop > img {
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+
+// .pppop{
+//     display: flex;
+//     flex-direction: column;
+// }

@@ -2,7 +2,7 @@
 
 .header {
     position: relative;
-    height: 80vh;
+    height: 50vh;
      background-image: linear-gradient(
         to right bottom,
         rgba(color(primary), 0.5),
@@ -10,15 +10,25 @@
       url(../media/trees.gif);
     background-position: top;
     background-size: cover;
-    border-bottom: white 13px solid;
+    border-bottom: maroon 13px solid;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+    @include laptop{
+      height: 80vh;
+      margin: 0;
+    }
 }
+
+
 
 .text-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     text-align: center;
+    z-index: 11111111;
   }
   
 .heading-primary {
@@ -28,7 +38,7 @@
     align-items: center;
     color: #fff;
     text-transform: uppercase;
-    width: 100vw;
+    width: 99vw;
     text-align: center;
     //text-shadow: 3px 3px 8px #111;
     font-weight: 700;
@@ -38,7 +48,7 @@
 
 .heading-primary-main {
       font-size: 4rem;
-      text-shadow: 3px 3px #333;
+      text-shadow: 2px 2px red;
       width: 80vw;
       letter-spacing: 1rem;
       text-align: center;
@@ -63,6 +73,7 @@
       }
     }
   }
+
   @keyframes slide-in {
     0% {
       transform: translateX(-200rem);
@@ -72,3 +83,36 @@
     }
   }
   
+
+  @keyframes slide-out {
+    0% {
+      transform: translateX(200rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  
+  .holly{
+  position:absolute;
+  bottom:0;
+  right:0;
+  animation-name: slide-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  z-index: 11111;
+  
+  }
+
+  .holy {
+    height: 80vw;
+   /*  filter: drop-shadow(5px 5px 5px black);
+ */    @include tablet {
+  height: 70vw;
+}
+@include laptop {
+ height: 50vw;
+}
+}

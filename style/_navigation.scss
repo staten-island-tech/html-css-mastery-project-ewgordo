@@ -1,18 +1,61 @@
+@import "_variables.scss";
+
 ul {
     list-style-type: none;
     position: sticky;
     overflow: hidden;
     top: 0;
+    z-index: 11111111111;
+    padding-left: 10px;
+    @include tablet {
+     padding-left: 40px;
+    }
+    @include laptop {
+      padding-left: 40px;
+    }
  }
+
  li {
-    float: right;
+    float: left;
     border-right: 1px solid white;
  }
+
+ li:last-child {
+   border-right: none;
+ }
+
+ li:first-child{
+   border-right: none;
+ }
+
  li a {
+    font-family: 'Cabin', sans-serif;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include laptop {
+      font-size: 2rem;
+    }
  }
+
+ ul img{
+   height: 3rem;
+   float: right;
+   margin-right: 0rem;
+   @include tablet {
+    height: 5rem;
+    margin-right: 5rem;
+  }
+  @include laptop {
+    height: 5rem;
+    margin-right: 5rem;
+  }
+ }
+
+ 

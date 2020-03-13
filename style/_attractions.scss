@@ -1,9 +1,146 @@
-#gallery {
-    margin-top: 20px;
+@import "_variables.scss";
+
+.title-attractions {
+    position: relative;
+     background-image: linear-gradient(
+        to right bottom,
+        rgba(color(primary), 0.5),
+        rgba(color(primary-light), 0.5)),
+      url(../media/scene.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px red;
+      }
+
+.attractions{
+  display: flex;
+    flex-direction: column;
+    border-bottom: maroon 13px solid;
 }
-#gallery .box{
-    float: left;
+.places{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+      font-family:'Open Sans', sans-serif;
     text-align: center;
-    width: 30%;
-    padding: 10px;
+    margin: 0;
+    @include tablet{
+        flex-direction: column;
+      }
+      @include desktop{
+        flex-direction: row;
+        }
 }
+
+.place{
+  margin: 3rem ;
+}
+
+.place:hover{
+    transform: scale(1.5);
+    filter: grayscale(0%);
+    transition: .5s;
+}
+
+.places:hover .place:not(:hover) {
+    filter: grayscale(100%);        
+ }
+
+ .hollywood img{
+     height:15rem;
+    @include tablet{
+        height:19rem;
+      }
+      @include desktop{
+        height:20rem;
+        }
+ }
+
+ .uni img{
+    height:10rem;
+    @include tablet{
+        height:19rem;
+      }
+      @include desktop{
+        height:20rem;
+        top:0;
+        }
+}
+
+.disney img{
+    height:10rem;
+    @include tablet{
+        height:19rem;
+      }
+      @include desktop{
+        height:20rem;
+        }
+}
+
+.wheel img{
+    height:10rem;
+    @include tablet{
+        height:19rem;
+      }
+      @include desktop{
+        height:20rem;
+        }
+}
+
+.ughu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family:'Open Sans', sans-serif;
+}
+
+//     perspective: 150rem ;
+//     position: relative;
+//     margin-top: 50px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     top:30rem;
+// }
+
+// .card-side {
+//     height: 200px;
+//     width: 300px;
+//     font-size: 15px;
+//     color: white;
+//     backface-visibility: hidden;
+//     box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+// }
+
+// .card-side-front{
+//     background-color: red;
+//     position: absolute;
+//     top: 10rem;
+//     left: 10rem;
+//     z-index: 1;
+//     transition: all 1s;
+// }
+
+
+// .card-side-back{
+//     background-color: maroon;
+//     position: absolute;
+//     top: 10rem;
+//     left: 10rem;
+//     z-index: 0;
+//     transform: rotateY(-180deg);    
+//     transition: all 1s; 
+// }   
+    
+// .card:hover .card-side-front{   
+//     transform: rotateY(-180deg);    
+// }
+
+// .card:hover .card-side-back{
+//     transform: rotateY(0deg);
+// }
